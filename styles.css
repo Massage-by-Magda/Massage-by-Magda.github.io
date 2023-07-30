@@ -118,8 +118,18 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+  }
+
+  .hero h3 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
   .hero-button{
-    margin-bottom: 60px;
+    margin-bottom: 10px;
   }
 }
 
@@ -169,6 +179,7 @@ font-size: 1.1rem;
     .owner-info,
     .owner-photo {
       flex: initial;
+      font-size: 0.9rem;
 
     }
     .owner-info h1,p{
