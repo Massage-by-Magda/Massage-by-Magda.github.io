@@ -1,57 +1,357 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/*-- ALL --*/
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    height: 100vh;
+li, a, button, section{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+/*-- NAV BAR --*/
+
+header {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: center;
-    background-color: #134734;
-}
-
-.container {
-    color: #ffffff;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.background {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: -100;
-    opacity: .2;
+    padding: 30px 10%;
+    background-color: #121212;
+   /*--  background-color: #124532; --*/
 }
 
 .logo {
-    max-width: 90vw;
-    padding-bottom: 30px;
+    cursor: pointer;
+    height: 60px;
+    margin-right: auto;
 }
 
-h1 {
-    font-size: 80px;
-    margin-bottom: 60px;
+.nav-links{
+    list-style: none;
 }
 
-.sm a {
+.nav-links li {
     display: inline-block;
-    width: 50px;
-    height: 50px;
-    background-color: #222222b2;
-    line-height: 50px;
-    color: #ffffff;
-    font-size: 26px;
-    border-radius: 50%;
-    margin: 0 10px;
-    transition: .3s linear;
+    padding: 0px 20px;
 }
 
-.sm a:hover {
-    transform: scale(1.1);
-    background-color: #222222;
+.nav-links li a{
+    transition: all 0.3s ease 0s;
 }
+
+.nav-links li a:hover{
+    color: #124532;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(18, 69, 50, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 20px;
+    
+}
+
+button:hover {
+    background-color: rgba(18, 69, 50, 0.8);
+}
+
+/*-- HERO --*/
+
+.container {
+    min-height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero{
+    background-image: url(images/hero2.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 0px
+}
+
+.hero h1{
+    display: block;
+    width:fit-content;
+    align-content: left;
+    font-size: 4rem;
+    font-weight: 700;
+    position: relative;
+    color: white;
+    padding: 20px 20px 0px 20px
+}
+.hero h3{
+    display: block;
+    width:fit-content;
+    font-size: 2rem;
+    font-weight: 300;
+    position: relative;
+    color: white;
+    padding: 0px 20px 0px 20px
+}
+
+.hero-button {
+    margin-top: 50px;
+    font-size: 1.5rem;
+    background-color: white;
+    color: black;
+ 
+  border-width: 5px;
+}
+
+button:hover {
+  background-color: rgba(207, 207, 207, 0.8);
+}
+
+/*-- INTRO --*/
+
+.owner-section {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.owner-info {
+    color: black;
+    flex: 1;
+    padding: 20px;
+    margin-right: 10px;
+text-align: justify;
+justify-content: flex-start;
+max-width: 660px;
+margin-bottom: 24px;
+font-size: 1.1rem;
+
+  }
+  
+  .owner-photo {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    max-width: fit-content;
+  }
+
+  .img-pp {
+   max-width: 340px;
+    border-radius: 360px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .owner-section {
+      flex-direction: column-reverse;
+    }
+  
+    .owner-info,
+    .owner-photo {
+      flex: initial;
+    }
+    .owner-info h1,p{
+    align-items: center;
+  }
+  }
+
+  /* LOCATION MAPS AND OPENING TIMES */
+
+.location-section {
+    background-color: #124532;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Align the items to the top of the container */
+    padding: 50px;
+  }
+  
+  .map-container {
+    flex: 1;
+    max-width: 60%;
+    text-align: center;
+    padding-bottom: 20px; /* Add some spacing at the bottom to separate from the text */
+  }
+  
+  
+  .location-info {
+    flex: 1;
+    max-width: 40%;
+    padding-left: 30px;
+  }
+  
+  .location-info h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .location-info p,
+  .location-info li {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .location-section {
+      flex-direction: column;
+    }
+    
+    .map-container,
+    .location-info {
+        align-items: center; /* Center the items horizontally in mobile view */
+      max-width: 100%; /* Make them full width in mobile view */
+      margin-top: 20px
+    }
+  
+    .map-container {
+      padding-bottom: 0; /* Remove the spacing at the bottom */
+    }
+  }
+  
+  /* PHOTOS OF THE VENUE */
+
+.photo-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo {
+    width: 25%; /* Each photo takes 25% of the container's width */
+    padding: 8px;
+}
+
+.photo img {
+    width: 100%; /* Set the image width to 100% */
+    max-height: 300px; /* Set the maximum height of the image to 300px (you can adjust this value) */
+    object-fit: cover; /* Preserve aspect ratio and cover the entire container */
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .photo {
+        width: 100%; /* Each photo takes 50% of the container's width on smaller screens */
+    }
+}
+
+@media (min-width: 786px){
+    .photo {
+        width: 50%; /* Each photo takes 50% of the container's width on smaller screens */
+    }
+}
+
+ /* OILS PRODUCT SECTION */
+
+.product-section {
+    background-color: #124532;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.product-info {
+    flex: 1;
+    padding: 20px;
+text-align: left;
+justify-content: flex-start;
+max-width: 660px;
+
+
+  }
+  
+  .product-photo {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    max-width: fit-content;
+  }
+
+  .img-product {
+   max-width: 340px;
+    border-radius: 360px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .product-section {
+      flex-direction: column;
+    }
+  
+    .owner-info,
+    .owner-photo {
+      flex: initial;
+    }
+    .owner-info h1,p{
+    align-items: center;
+  }
+  }
+
+   /* SERVICES */
+
+   .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+    padding: 20px;
+    text-align: center;
+    max-width: 300px; /* Adjust the width as needed */
+    margin: 10px; /* Add some spacing between cards */
+  }
+  
+  .icon-pic {
+    max-width: 120px;
+    text-align: center;
+   }
+   
+
+
+  .card p {
+    margin: 20px 0;
+    color: black
+  }
+
+  #info-para {
+    margin-bottom: 20px;
+  }
+  
+  .pricing {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+  }
+  
+  .price-item {
+    flex: 1;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .cards-container {
+      flex-direction: column; /* Stack cards vertically on smaller screens */
+      align-items: center;
+    }
+  }
+  
+  
