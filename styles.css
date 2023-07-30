@@ -131,6 +131,9 @@ button:hover {
   .hero-button{
     margin-bottom: 10px;
   }
+  .container {
+    min-height: 100vh;
+  }
 }
 
 
@@ -154,7 +157,7 @@ button:hover {
 text-align: justify;
 justify-content: flex-start;
 max-width: 660px;
-margin-bottom: 40px;
+margin-bottom: 30px;
 font-size: 1.1rem;
 
   }
@@ -186,7 +189,8 @@ font-size: 1.1rem;
     align-items: center;
   }
   .img-pp {
-    max-width: 100%;
+    margin-top: 20px;
+    max-width: 200px;
    }
   }
 
