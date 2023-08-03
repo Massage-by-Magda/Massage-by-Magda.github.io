@@ -208,7 +208,7 @@ font-size: 1.1rem;
   
   .map-container {
     flex: 1;
-    max-width: 100%;
+    max-width: 580px;
     text-align: center;
     padding-bottom: 20px; /* Add some spacing at the bottom to separate from the text */
   }
